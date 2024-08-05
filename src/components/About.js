@@ -3,7 +3,6 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import { BsZoomIn } from "react-icons/bs";
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -28,7 +27,7 @@ const About = () => {
             variants={fadeIn("left", 0.5)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             className="flex-1"
           >
             <h2 className="h2 text-accent">About me.</h2>
